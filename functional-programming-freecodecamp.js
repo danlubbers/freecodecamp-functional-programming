@@ -674,3 +674,64 @@ return acc;
 // Add your code above this line
 
 console.log(averageRating); 
+
+// 16. Sort an Array Alphabetically using the sort Method
+
+function alphabeticalOrder(arr) {
+  // Add your code below this line
+  return arr.sort(function(a, b) {
+    return a > b
+  })
+  
+  // Add your code above this line
+}
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+
+// 17. Return a Sorted Array Without Changing the Original Array
+
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Add your code below this line
+  let newArr = arr.concat();
+  return newArr.sort(function(a, b) {
+    return a - b;
+  })
+  
+  // Add your code above this line
+}
+console.log(nonMutatingSort(globalArray));
+
+// 18. Split a String into an Array Using the split Method
+
+function splitify(str) {
+  // Add your code below this line
+  return str.split(/\W/);
+  
+  // Add your code above this line
+}
+console.log(splitify("Hello World,I-am code"));
+
+// 19. Combine an Array into a String Using he join Method
+
+function sentensify(str) {
+  // Add your code below this line
+  return str.split(/\W/).join(' ');
+  
+  // Add your code above this line
+}
+console.log(sentensify("May-the-force-be-with-you"));
+
+// 20. Apply Functional Programing to Convert Strings to URL Slugs
+
+// the global variable
+var globalTitle = "Winter Is Coming";
+
+// Add your code below this line
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\s+/).join('-');
+}
+// Add your code above this line
+
+var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
+console.log(winterComing);
+console.log(urlSlug(" Winter Is  Coming"));
