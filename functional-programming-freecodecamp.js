@@ -181,21 +181,21 @@ function add (arr, bookName) {
 // New parameters should come before the bookName one
 
 // Add your code below this line
-function remove (arr, bookName) {
-  let copy = [...arr];
-  if (copy.indexOf(bookName) >= 0) {
-    copy.splice(copy.indexOf(bookName), 1);
-    return copy
-    // Add your code above this line
-    }
-}
+// function remove (arr, bookName) {
+//   let copy = [...arr];
+//   if (copy.indexOf(bookName) >= 0) {
+//     copy.splice(copy.indexOf(bookName), 1);
+//     return copy
+//     // Add your code above this line
+//     }
+// }
 
-var newBookList = add(bookList, 'A Brief History of Time');
-var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
-var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+// var newBookList = add(bookList, 'A Brief History of Time');
+// var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+// var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
 
-console.log(bookList);
-console.log(add(newBookList));
+// console.log(bookList);
+// console.log(add(newBookList));
 
 // 7. Use the map Method to Extract Data from an Array
 
@@ -735,3 +735,42 @@ function urlSlug(title) {
 var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
 console.log(winterComing);
 console.log(urlSlug(" Winter Is  Coming"));
+
+// 21. Use the every Method to Check that Every Element in an Array meets a criteria
+
+function checkPositive(arr) {
+  // Add your code below this line
+  return arr.every(function(currentValue) {
+    return currentValue >= 0;
+  })
+  
+  // Add your code above this line
+}
+console.log(checkPositive([1, 2, 3, -4, 5]));
+
+// 22. Use the some Method to Check that any elements in an Array meets a criteria
+
+function checkPositive(arr) {
+  // Add your code below this line
+  return arr.some(function(currentValue) {
+    return currentValue >= 0;
+  })
+  
+  // Add your code above this line
+}
+console.log(checkPositive([1, 2, 3, -4, 5]));
+
+// 23. Introduction to Currying and Partial Application
+
+function add(x) {
+  // Add your code below this line
+  return function(y){
+    return function(z) {
+      return x + y + z;
+    }
+  }
+  
+  // Add your code above this line
+}
+console.log(add(10)(20)(30));
+
